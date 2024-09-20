@@ -6,9 +6,8 @@ LABEL com.github.containers.toolbox="true" \
       maintainer="tj5miniop@gmail.com"
 
 COPY extra-packages /
-RUN pacman -Sy && \
-    pacman -Syyu && \
-    pacman -Sy > extra-packages
+RUN pacman -Syyu && \
+    pacman -Syy - > extra-packages
 RUN rm /extra-packages
 
 RUN   ln -fs /bin/sh /usr/bin/sh && \
