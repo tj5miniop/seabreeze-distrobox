@@ -8,7 +8,7 @@ LABEL com.github.containers.toolbox="true" \
 COPY extra-packages /
 RUN pacman -Sy && \
     pacman -Syyu && \
-    grep -v '^#' /extra-packages | xargs apk add
+    pacman -Sy > extra-packages
 RUN rm /extra-packages
 
 RUN   ln -fs /bin/sh /usr/bin/sh && \
