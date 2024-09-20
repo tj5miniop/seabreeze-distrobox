@@ -1,7 +1,7 @@
 FROM quay.io/toolbx-images/archlinux-toolbox:latest
 
 LABEL com.github.containers.toolbox="true" \
-      usage="My terminal experience, anywhere!" \
+      usage="A base for all my arch-distrobox projects" \
       summary="A cloud-native terminal experience" \
       maintainer="tj5miniop@gmail.com"
 
