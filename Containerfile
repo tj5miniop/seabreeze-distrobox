@@ -1,13 +1,13 @@
-FROM quay.io/toolbx-images/alpine-toolbox:edge
+FROM quay.io/toolbx-images/archlinux-toolbox:latest
 
 LABEL com.github.containers.toolbox="true" \
-      usage="This image is meant to be used with the toolbox or distrobox command" \
+      usage="My terminal experience, anywhere!" \
       summary="A cloud-native terminal experience" \
-      maintainer="jorge.castro@gmail.com"
+      maintainer="tj5miniop@gmail.com"
 
 COPY extra-packages /
-RUN apk update && \
-    apk upgrade && \
+RUN pacman -Sy && \
+    pacman -Syyu && \
     grep -v '^#' /extra-packages | xargs apk add
 RUN rm /extra-packages
 
