@@ -1,14 +1,18 @@
-FROM quay.io/toolbx-images/archlinux-toolbox:latest
-
+FROM ghcr.io/ublue-os/wolfi-dx
 LABEL com.github.containers.toolbox="true" \
-      usage="A base for all my arch-distrobox projects" \
+      usage="My Ultimate Development Experience based on Wolfi and Universal Blue \
       summary="A cloud-native terminal experience" \
       maintainer="tj5miniop@gmail.com"
 
-COPY extra-packages /
-RUN pacman -Syyu && \
-    pacman -Syy - > extra-packages
-RUN rm /extra-packages
+COPY extra-packages
+
+RUN apk update && \
+    apk upgrade && \
+    brew update && \
+    brew upgrade && \
+    brew install python3 && \
+    brew install --cask vscodium && \
+    brew install zsh zsh-autocomplete git fastfetch cosign
 
 RUN   ln -fs /bin/sh /usr/bin/sh && \
       ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/docker && \
