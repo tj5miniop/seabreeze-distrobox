@@ -1,6 +1,6 @@
 FROM ghcr.io/ublue-os/wolfi-dx
 LABEL com.github.containers.toolbox="true" \
-      usage="My Ultimate Development Experience based on Wolfi and Universal Blue \
+      usage="My (Currently in Development Experience based on Wolfi and Universal Blue \
       summary="A cloud-native terminal experience" \
       maintainer="tj5miniop@gmail.com"
 
