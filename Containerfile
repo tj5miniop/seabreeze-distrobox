@@ -4,7 +4,7 @@ ARG SOURCE_IMAGE="${SOURCE_IMAGE_REGISTRY}/${SOURCE_IMAGE_NAME}"
 
 FROM $SOURCE_IMAGE:latest
 LABEL com.github.containers.toolbox="true" \
-      usage="My (Currently in Development Experience based on Wolfi and Universal Blue" \
+      usage="My Fork of the Bluefin CLI distrobox OCI image from Universal Blue" \
       summary="A cloud-native terminal experience" \
       maintainer="tj5miniop@gmail.com"
 
