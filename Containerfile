@@ -8,8 +8,6 @@ LABEL com.github.containers.toolbox="true" \
       summary="A cloud-native terminal experience" \
       maintainer="tj5miniop@gmail.com"
 
-COPY extra-packages
-
 RUN apk update && \
     apk upgrade && \
     brew update && \
