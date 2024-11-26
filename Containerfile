@@ -10,11 +10,6 @@ LABEL com.github.containers.toolbox="true" \
 
 RUN apk update && \
     apk upgrade && \
-    brew update && \
-    brew upgrade && \
-    brew install python3 && \
-    brew install --cask vscodium && \
-    brew install zsh zsh-autocomplete git fastfetch cosign
 
 RUN   ln -fs /bin/sh /usr/bin/sh && \
       ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/docker && \
